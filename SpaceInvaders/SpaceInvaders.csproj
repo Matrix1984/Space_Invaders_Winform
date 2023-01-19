@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0C875A4E-56A0-4BA6-BC31-F4C0E50541F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>SpaceInvaders</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6531C4F8C438839764C4D1A70240AFE774068570</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SpaceInvaders_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SpaceInvadorGame\Invaders.cs" />
+    <Compile Include="SpaceInvadorGame\Game.cs" />
+    <Compile Include="SpaceInvadorGame\PlayerShip.cs" />
+    <Compile Include="SpaceInvadorGame\Shot.cs" />
+    <Compile Include="SpaceInvaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpaceInvaders.Designer.cs">
+      <DependentUpon>SpaceInvaders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpaceInvaders.resx">
+      <DependentUpon>SpaceInvaders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SpaceInvadorGame\Stars.cs" />
+    <None Include="SpaceInvaders_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\watchit4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\bug1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\bug2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\bug3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\bug4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\flyingsaucer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\flyingsaucer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\flyingsaucer3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\flyingsaucer4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\satellite1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\satellite2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\satellite3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\satellite4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\spaceship1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\spaceship2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\spaceship3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\spaceship4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\star2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\star3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\star4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\watchit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\watchit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\watchit3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RocketShotSmaller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmallHomingMissile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrokenOffRocket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RocketWithSteam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WEAPON_DISPLAY_multiShots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WEAPON_DISPLAY_GuidedLaserRocket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WEAPON_DISPLAY_Laser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WEAPON_DISPLAY_multiRockets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WEAPON_DISPLAY_RegularMissile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WEAPON_DISPLAY_RegularShots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
